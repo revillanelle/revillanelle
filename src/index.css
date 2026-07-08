@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #8fd2e0;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9a9a97;
+  opacity: 1;
+}
+
+/* thin underline-style form inputs, matching the Wix form fields */
+.field-line {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  color: #f3f1ec;
+  padding: 0.5rem 0.1rem;
+  transition: border-color 0.2s ease;
+  width: 100%;
+}
+.field-line:focus {
+  border-bottom-color: #8fd2e0;
+  outline: none;
+}
+
+.btn-solid {
+  background: #ffffff;
+  color: #0a0a0a;
+  padding: 0.9rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+.btn-solid:hover {
+  opacity: 0.85;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #f3f1ec;
+  border: 1px solid #f3f1ec;
+  padding: 0.8rem 1.75rem;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.2s ease, color 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+.btn-outline:hover {
+  background: #f3f1ec;
+  color: #0a0a0a;
+}
+
+.wave-bg {
+  background-color: #050505;
+  background-image: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.05), transparent 60%),
+    repeating-linear-gradient(115deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 14px);
+}
